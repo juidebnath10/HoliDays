@@ -405,6 +405,82 @@ div{
     font-weight: 26px;
 }
 
+/* travel experiencestyle */
+.travel{
+    max-width: 1170px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+.experience{
+    margin-bottom: 100px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_item{
+    position: relative;
+}
+
+.about_item::before{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 250px;
+   width: 380px;
+   border-radius: 16px;
+   background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
+   opacity: 0;
+   transition: .5s all ease-in-out;
+}
+
+.about_item:hover:before{
+    opacity: .8;
+}
+
+.about_item img{
+    height: 250px;
+    width: 380px;
+}
+
+.about_icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+    text-align: center;
+}
+
+.about_item:hover .about_icon{
+    opacity: .9;
+}
+
+.about_icon i{
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+
+.about_icon i::before{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about_icon h6{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* newsletter style */
 
 .newsletter{
@@ -503,6 +579,7 @@ div{
     margin-bottom: 40px;
     padding-top: 10px;
 }
+
 
 /* footer style */
 footer{
@@ -744,6 +821,21 @@ footer .description{
         height: 425px;
     }
 
+    .about{
+        flex-direction: column;
+        margin: 0px 10px;
+        gap: 20px;
+    }
+
+    .about_item{
+        text-align: center;
+        position: relative;
+    }
+
+.about_item:hover:before{
+    opacity: .8;
+}
+
     .newsletter-info{
         text-align: center;
     }
@@ -924,6 +1016,16 @@ footer .description{
 
     .us .best{
         grid-column: 1/span 1;
+    }
+
+    .about{
+        flex-direction: column;
+        margin: 0px 10px;
+        gap: 20px;
+    }
+
+    .about_item{
+        text-align: center;
     }
 
     .newsletter-details{
