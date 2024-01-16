@@ -12,7 +12,7 @@ body{
 
 .btn-primary{
     padding: 13px 22px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ffffff;
     background: #FF5400;
@@ -112,12 +112,14 @@ label i{
     color: #131318;
 }
 
+/* banner style */
 .banner{
     max-width: 1186px;
     min-width: 200px;
-    margin: 60px auto;
+    margin: 40px auto;
     background: url("../Images/banner.png") center top no-repeat;
     background-size: cover;
+    /* height: 500px; */
     border-radius: 16px;
     position: relative;
 }
@@ -135,7 +137,7 @@ label i{
 
 .inner-banner{
     position: relative;
-    padding: 160px;
+    padding: 100px;
     text-align: center;
     align-items: center;
 }
@@ -162,16 +164,11 @@ label i{
     background: rgba(255, 255, 255, 0.30);
 }
 
-.banner-input .text{
-    padding: 16px 10px;
-    width: 125px;
-}
-
-.banner-input .select{
-    padding: 16px 16px;
-    color: #131318;
-    background-color: #FFF;
-    width: 150px;
+.banner-input input, select{
+    width: 174px;
+    height: 52px;
+    border-radius: 8px;
+    border: 0;
 }
 
 .btn-primary i{
@@ -183,6 +180,18 @@ label i{
 .btn-primary i a{
     text-decoration: none;
     color: #FFF;
+}
+
+.btn-primary i:hover{
+    color: #ff5400;
+}
+
+.btn-primary i:focus{
+    color: #ff5400;
+}
+
+.btn-primary i a:hover{
+    color: #ff5400;
 }
 
 /* popular tour style */
@@ -197,6 +206,7 @@ label i{
     margin: 100px 0px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .popular{
@@ -211,23 +221,23 @@ label i{
 
 .tours .popular p{
     color: rgba(19, 19, 24, 0.70);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 24px;
     padding: 24px 0px;
 }
 
 .popular ul{
     padding-left: 35PX;
     color: rgba(19, 19, 24, 0.70);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 26px;
-    padding-bottom: 24px;
+    padding-bottom: 15px;
 }
 
 .popular ul li{
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .tour-img{
@@ -240,6 +250,7 @@ label i{
     height: 100%;
     margin: 0 auto;
     object-fit: cover;
+    border-radius: 16px;
 }
 
 /* destination style */
@@ -489,8 +500,99 @@ div{
     padding-top: 10px;
 }
 
+/* footer style */
+footer{
+    background: rgba(19, 19, 24, 0.05);
+    text-align: center;
+    padding-top: 60px;
+}
+
+.foot-item{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot-item img{
+    width: 5%;
+}
+
+.foot-item h3{
+    color: #131318;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.foot-item h3 span{
+    color: #FF5400;
+}
+
+.footer-description{
+    padding: 16px 0px;
+    color: #5A5A5D;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px
+}
+
+.footer-icons{
+    margin-top: 10px;
+}
+
+.footer-icons a i{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #424247;
+    margin-bottom: 50px;
+}
+
+.footer-icons a i:hover{
+    color: #FF5400;
+}
+
+hr{
+    width: 872px;
+    height: 1px;
+    margin: 0 auto;
+    color: #131318;
+}
+
+footer .description{
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsive style */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
+     header {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .nav-item img{
+        width: 100%;
+    }
+
     .menu{
         width: 100%;
         max-height: 0;
@@ -511,37 +613,70 @@ div{
         padding: 20px;
     }
 
+    .banner{
+        margin: 0px 10px;
+    }
+
+    .inner-banner{
+        padding: 32px 24px;
+    }
+
+    .banner-title{
+        font-size: 26px;
+    }
+
+    .banner-description{
+        width: 300px;
+        height: 63px;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
     .banner-input{
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .banner-input input, select{
+        width: 200px;
     }
 
     .btn-primary{
-        padding: 13px 16px;
-        font-size: 1rem;
-        font-weight: 700;
-    }
-    
-    .banner{
-        margin-left: 10px;
-        margin-right: 10px;
-        flex-direction: column;
-
+        width: 200px;
+        text-align: center;
     }
 
     .tours{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 24px 10px;
     }
 
     .popular-tours{
         display: grid;
         grid-template-rows: repeat(1, 1fr);
-        gap: 20px;
+        gap: 30px;
     }
 
     .popular{
         width: 100%;
+    }
+
+    .tours .popular h2{
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .tours .popular p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .popular ul{
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .tour-img{
@@ -585,11 +720,145 @@ div{
     }
 }
 
+
+
+
+
 @media screen and (min-width: 601px) and (max-width: 992px){
+     header {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .nav-item img{
+        width: 20%;
+    }
+
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    label{
+        display: inline-flex;
+    }
+
+    #toggler:checked~.menu{
+        max-height: 100%;
+        text-align: end;
+    }
+   .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .banner{
+        margin: 0px 10px;
+    }
+
+    .inner-banner{
+        padding: 32px 24px;
+    }
+
+    .banner-title{
+        font-size: 36px;
+    }
+
+    .banner-description{
+        width: 400px;
+        height: 63px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .banner-input{
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .banner-input input, select{
+        width: 200px;
+    }
+
+    .btn-primary{
+        width: 200px;
+        text-align: center;
+    }
+
+    .tours{
+        margin: 24px 10px;
+    }
+
+    .popular-tours{
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .popular{
+        width: 100%;
+    }
+
+    .tours .popular h2{
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .tours .popular p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .popular ul{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .tour-img{
+        width: 100%;
+    }
+
     .details .row{
         flex-direction: column;
         height: auto;
     }
+
+    .us{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .us .hotel{
+        grid-column: 1/span 1;
+    }
+
+    .us .map{
+        grid-column: 1/span 1;
+    }
+
+    .us .best{
+        grid-column: 1/span 1;
+    }
+
+    .newsletter-details{
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .form{
+        height: 425px;
+    }
+
+    .save-up{
+        margin-top: 40px;
+    }
 }
+
 
 /* responsive style end */
